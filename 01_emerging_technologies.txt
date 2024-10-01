@@ -1,43 +1,4 @@
-1. Artificial Intelligence (AI)
-
-PURPOSE: 
-The primary goal of Artificial Intelligence is to simulate human-like intelligence in machines,
-empowering them to carry out complex tasks and decision-making processes autonomously.
-
-USAGE:
-In both education and IT, AI is driving significant improvements in efficiency, personalization, and scalability. 
-In education, We’re still learning how AI technologies will integrate into the education sector as they develop, 
-and we don’t yet have a full picture of how AI will affect critical issues of ethics, equity and data safety.
-In IT, AI improves cybersecurity, optimizes operations, and assists in software development and customer support.
-
-EXAMPLE:
-Grammarly: Utilizes AI to analyze and provide feedback on writing, including grammar, style, and tone. 
-It helps the users improve their writing skills by offering real-time corrections and suggestions.
-
-2.Virtual Reality (VR) 
-
-PURPOSE:
-The goal of virtual reality technology is to create an immersive experience 
-that can be used to explore an environment that helps to educate or entertain the end user.
-
-USAGE:
-In education, VR is transforming learning by providing enhancing engagement, 
-and offering practical training opportunities. It helps students explore new environments, 
-understand complex concepts, and develop skills in a controlled and interactive manner. 
-In IT, VR aids in design and development, software testing, and customer support.
-
-EXAMPLE:
-Google Expeditions: This VR platform allows teachers to take students on virtual field trips
-to locations such as the Great Wall of China or the surface of Mars. 
-
-3. Blockchain
-
-PURPOSE:
-The primary purpose of the blockchain is to create a digital database that allows information 
-to be recorded and distributed but not changed in any way.
-
-USAGE:
-Blockchain technology is making significant impacts in 
+1. Artificial Intelligence (AI) PURPOSE: The primary goal of Artificial Intelligence is to simulate human-like intelligence in machines, empowering them to carry out complex tasks and decision-making processes autonomously. USAGE: In both education and IT, AI is driving significant improvements in efficiency, personalization, and scalability. In education, We’re still learning how AI technologies will integrate into the education sector as they develop, and we don’t yet have a full picture of how AI will affect critical issues of ethics, equity and data safety. In IT, AI improves cybersecurity, optimizes operations, and assists in software development and customer support. EXAMPLE: Grammarly: Utilizes AI to analyze and provide feedback on writing, including grammar, style, and tone. It helps the users improve their writing skills by offering real-time corrections and suggestions. 2.Virtual Reality (VR) PURPOSE: The goal of virtual reality technology is to create an immersive experience that can be used to explore an environment that helps to educate or entertain the end user. USAGE: In education, VR is transforming learning by providing enhancing engagement, and offering practical training opportunities. It helps students explore new environments, understand complex concepts, and develop skills in a controlled and interactive manner. In IT, VR aids in design and development, software testing, and customer support. EXAMPLE: Google Expeditions: This VR platform allows teachers to take students on virtual field trips to locations such as the Great Wall of China or the surface of Mars. 3. Blockchain PURPOSE: The primary purpose of the blockchain is to create a digital database that allows information to be recorded and distributed but not changed in any way. USAGE: Blockchain technology is making significant impacts in 
 both education and IT by providing enhanced security, transparency, and efficiency. 
 
 EXAMPLE:
