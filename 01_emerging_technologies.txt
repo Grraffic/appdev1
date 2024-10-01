@@ -6,7 +6,6 @@ Banking. In the banking sector, the blockchain allows economic transactions
 to be carried out securely and quickly in the face of possible fraud and manipulation due to the use of coding and encryption. 
 
 4. 5G Technology
-
 PURPOSE:
 5G benefits applications such as factory automation, video surveillance and connected vehicles due to its lower latency, 
 high speeds and support for numerous connected devices compared with 4G networks.
