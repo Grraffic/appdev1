@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { IoIosAddCircle } from "react-icons/io";
 import { IoMdCheckmarkCircle } from "react-icons/io";
 import { MdDelete } from "react-icons/md";
+import "/public/css/style.css";
 import { db } from "../firebase.js";
 import {
   collection,
@@ -55,7 +56,7 @@ const TaskList = ({ user }) => {
     });
 
     setTasks([
-      ...tasks,
+      ...tasks, //spread operator cinocopy nya lang yung laman
       {
         id: docRef.id,
         title: title,
@@ -71,14 +72,14 @@ const TaskList = ({ user }) => {
   const handleCompleteTask = async (id, status) => {
     const taskRef = doc(db, "tasks", id);
     await updateDoc(taskRef, {
-      status: status === "Pending" ? "Completed" : "Completed",
+      status: status === "Pending",
     });
     setTasks(
       tasks.map((task) =>
         task.id === id
           ? {
               ...task,
-              status: task.status === "Pending" ? "Completed" : "Completed",
+              status: task.status === "Pending" ? "Completed" : "Pending",
             }
           : task
       )
@@ -92,51 +93,58 @@ const TaskList = ({ user }) => {
   };
 
   return (
-    <div>
-      <h1>Welcome, {user}</h1>
-      <h2>Task list</h2>
+    <>
+      <div className="container">
+        <div className="user">
+          <h1 className="name">Welcome, {user}</h1>
+        </div>
 
-      <form>
-        <input
-          type="text"
-          placeholder="Add Task"
-          value={title}
-          onChange={handleTitleChange}
-          required
-        />
-        <div>
-          <textarea
-            placeholder="Description"
-            value={description}
-            onChange={handleDescriptionChange}
+        <h2 className="task">Task lists:</h2>
+        <form className="form">
+          <input
+            className="input"
+            type="text"
+            placeholder="Add Task"
+            value={title}
+            onChange={handleTitleChange}
             required
           />
-        </div>
-        <button onClick={handleAddTask}>
-          <IoIosAddCircle />
-          Add Task
-        </button>
-      </form>
+          <div className="area">
+            <input
+              className="textarea"
+              placeholder="Description"
+              value={description}
+              onChange={handleDescriptionChange}
+              required
+            />
+          </div>
 
-      <ul>
-        {tasks.map((task) => (
-          <li key={task.id}>
-            <p>Title: {task.title}</p>
-            <p>Description: {task.description}</p>
-            <p>Status: {task.status}</p>
-            {/* BUTTON */}
-            <button onClick={() => handleCompleteTask(task.id, task.status)}>
-              <IoMdCheckmarkCircle />
-              Completed
-            </button>
-            <button onClick={() => handleDeleteTask(task.id)}>
-              <MdDelete />
-              Delete
-            </button>
-          </li>
-        ))}
-      </ul>
-    </div>
+          <button onClick={handleAddTask}>
+            <IoIosAddCircle />
+            Add Task
+          </button>
+        </form>
+
+        <ul>
+          {tasks.map((task) => (
+            <li key={task.id}>
+              <p>Title: {task.title}</p>
+              <p>Description: {task.description}</p>
+              <p>Status: {task.status}</p>
+              {/* BUTTON */}
+              <button onClick={() => handleCompleteTask(task.id, task.status)}>
+                <IoMdCheckmarkCircle />
+                Completed
+              </button>
+              <button onClick={() => handleDeleteTask(task.id)}>
+                <MdDelete />
+                Delete
+              </button>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </>
   );
 };
 
