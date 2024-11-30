@@ -56,7 +56,7 @@ const TaskList = ({ user }) => {
     });
 
     setTasks([
-      ...tasks, //spread operator cinocopy nya lang yung laman
+      ...tasks, //spread operator cinocopy nya lang yung
       {
         id: docRef.id,
         title: title,
@@ -72,14 +72,14 @@ const TaskList = ({ user }) => {
   const handleCompleteTask = async (id, status) => {
     const taskRef = doc(db, "tasks", id);
     await updateDoc(taskRef, {
-      status: status === "Pending",
+      status: status === "Pending" ? "Completed" : "Pending",
     });
     setTasks(
       tasks.map((task) =>
         task.id === id
           ? {
               ...task,
-              status: task.status === "Pending" ? "Completed" : "Pending",
+              status: task.status === "Pending" ? "Completed" : "Completed",
             }
           : task
       )
