@@ -79,7 +79,7 @@ const TaskList = ({ user }) => {
         task.id === id
           ? {
               ...task,
-              status: task.status === "Pending" ? "Completed" : "Completed",
+              status: task.status === "Pending" ? "Completed" : "Pending",
             }
           : task
       )
