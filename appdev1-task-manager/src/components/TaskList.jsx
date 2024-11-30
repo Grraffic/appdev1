@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { IoIosAddCircle } from "react-icons/io";
 import { IoMdCheckmarkCircle } from "react-icons/io";
+import { MdPending } from "react-icons/md";
+
 import { MdDelete } from "react-icons/md";
 import "/public/css/style.css";
 import { db } from "../firebase.js";
@@ -127,14 +129,31 @@ const TaskList = ({ user }) => {
 
         <ul>
           {tasks.map((task) => (
-            <li key={task.id}>
+            <li
+              key={task.id}
+              className={task.status === "Pending" ? "pending" : ""}
+            >
               <p>Title: {task.title}</p>
               <p>Description: {task.description}</p>
               <p>Status: {task.status}</p>
               {/* BUTTON */}
-              <button onClick={() => handleCompleteTask(task.id, task.status)}>
-                <IoMdCheckmarkCircle />
-                Completed
+              <button
+                onClick={() => handleCompleteTask(task.id, task.status)}
+                className={
+                  task.status === "Pending" ? "pending-btn" : "completed-btn"
+                }
+              >
+                {task.status === "Completed" ? (
+                  <>
+                    <MdPending />
+                    Pending
+                  </>
+                ) : (
+                  <>
+                    <IoMdCheckmarkCircle />
+                    Completed
+                  </>
+                )}
               </button>
               <button onClick={() => handleDeleteTask(task.id)}>
                 <MdDelete />

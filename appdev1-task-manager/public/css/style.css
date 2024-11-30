@@ -60,7 +60,7 @@ button {
   align-items: center;
   justify-content: center;
   gap: 5px;
-  background-color: #4caf50;
+  background-color: #4caf50; /* Default green */
   color: #fff;
   font-size: 16px;
   padding: 10px;
@@ -102,6 +102,18 @@ li button {
   font-size: 14px;
 }
 
+li.pending {
+  background-color: orange;
+}
+
+li.pending button:first-child {
+  background-color: #ff9800;
+}
+
+li.pending button:first-child:hover {
+  background-color: #fb8c00;
+}
+
 li button:first-child {
   background-color: #4caf50;
 }
@@ -116,4 +128,20 @@ li button:last-child {
 
 li button:last-child:hover {
   background-color: #e53935;
+}
+
+button.completed-btn {
+  background-color: #ff9800;
+}
+
+button.completed-btn:hover {
+  background-color: #fb8c00;
+}
+
+button.pending-btn {
+  background-color: #4caf50;
+}
+
+button.pending-btn:hover {
+  background-color: #45a049;
 }
